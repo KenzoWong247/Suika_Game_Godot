@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://0jf46s6vqvlv"]
+
+[ext_resource type="PackedScene" uid="uid://dbjplvyx1hbc" path="res://Scenes/fruit.tscn" id="1_qs0r4"]
+[ext_resource type="Texture2D" uid="uid://bosj5ddv8kvc4" path="res://Assets/fruits.png" id="2_c6oxl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fk87i"]
+radius = 42.2966
+
+[node name="Lemon" groups=["Lemon"] instance=ExtResource("1_qs0r4")]
+fruit_type = 3
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_c6oxl")
+region_enabled = true
+region_rect = Rect2(1284, 137, 115, 116)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_fk87i")

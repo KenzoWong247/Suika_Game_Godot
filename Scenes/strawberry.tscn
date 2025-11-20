@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://135q87k5urrg"]
+
+[ext_resource type="PackedScene" uid="uid://dbjplvyx1hbc" path="res://Scenes/fruit.tscn" id="1_d1a6m"]
+[ext_resource type="Texture2D" uid="uid://bosj5ddv8kvc4" path="res://Assets/fruits.png" id="2_p8by1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hccns"]
+radius = 28.0179
+
+[node name="Strawberry" groups=["Strawberry"] instance=ExtResource("1_d1a6m")]
+fruit_type = 1
+
+[node name="Sprite2D" parent="." index="0" groups=["Strawberry"]]
+position = Vector2(2, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_p8by1")
+region_enabled = true
+region_rect = Rect2(528, 145, 103, 105)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_hccns")

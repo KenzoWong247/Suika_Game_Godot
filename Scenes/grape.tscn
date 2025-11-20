@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://lixi6y3ph4x8"]
+
+[ext_resource type="PackedScene" uid="uid://dbjplvyx1hbc" path="res://Scenes/fruit.tscn" id="1_ilavy"]
+[ext_resource type="Texture2D" uid="uid://bosj5ddv8kvc4" path="res://Assets/fruits.png" id="2_1ylpa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ufxsp"]
+radius = 34.3657
+
+[node name="Grape" groups=["Grape"] instance=ExtResource("1_ilavy")]
+fruit_type = 2
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(1, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_1ylpa")
+region_enabled = true
+region_rect = Rect2(900, 131, 120, 124)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_ufxsp")

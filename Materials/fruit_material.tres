@@ -1,0 +1,4 @@
+[gd_resource type="PhysicsMaterial" format=3 uid="uid://suux6s2x805f"]
+
+[resource]
+bounce = 0.1

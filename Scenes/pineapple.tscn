@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7manei7ld2d2"]
+
+[ext_resource type="PackedScene" uid="uid://dbjplvyx1hbc" path="res://Scenes/fruit.tscn" id="1_dit5t"]
+[ext_resource type="Texture2D" uid="uid://b3gg4xxuqft60" path="res://Assets/fruits2.png" id="2_16spu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vsqor"]
+radius = 103.0
+
+[node name="Pineapple" groups=["Pineapple"] instance=ExtResource("1_dit5t")]
+fruit_type = 8
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(1, -39)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("2_16spu")
+region_enabled = true
+region_rect = Rect2(467, 32, 216, 305)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_vsqor")

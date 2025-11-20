@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://daaxnukr5w2ev"]
+
+[ext_resource type="PackedScene" uid="uid://dbjplvyx1hbc" path="res://Scenes/fruit.tscn" id="1_jsxm7"]
+[ext_resource type="Texture2D" uid="uid://bosj5ddv8kvc4" path="res://Assets/fruits.png" id="2_sg5si"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_abmjr"]
+blend_mode = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q8gam"]
+radius = 153.013
+
+[node name="Megamelon" groups=["Megamelon"] instance=ExtResource("1_jsxm7")]
+fruit_type = 10
+
+[node name="Sprite2D" parent="." index="0"]
+material = SubResource("CanvasItemMaterial_abmjr")
+position = Vector2(0, 2)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_sg5si")
+region_enabled = true
+region_rect = Rect2(2741, 56, 278, 276)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_q8gam")

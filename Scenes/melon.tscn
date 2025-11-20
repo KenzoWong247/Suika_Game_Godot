@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnq1dxhc0lpku"]
+
+[ext_resource type="PackedScene" uid="uid://dbjplvyx1hbc" path="res://Scenes/fruit.tscn" id="1_wgieq"]
+[ext_resource type="Texture2D" uid="uid://bosj5ddv8kvc4" path="res://Assets/fruits.png" id="2_c56k1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_71xtx"]
+radius = 133.304
+
+[node name="Melon" groups=["Melon"] instance=ExtResource("1_wgieq")]
+fruit_type = 9
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_c56k1")
+region_enabled = true
+region_rect = Rect2(2741, 54, 278, 279)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_71xtx")

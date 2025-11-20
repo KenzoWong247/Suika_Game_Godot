@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmla4e6d5ck0l"]
+
+[ext_resource type="PackedScene" uid="uid://dbjplvyx1hbc" path="res://Scenes/fruit.tscn" id="1_w6rmg"]
+[ext_resource type="Texture2D" uid="uid://bosj5ddv8kvc4" path="res://Assets/fruits.png" id="2_wtttb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7umym"]
+radius = 62.2013
+
+[node name="Apple" groups=["Apple"] instance=ExtResource("1_w6rmg")]
+fruit_type = 5
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(1, -5)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_wtttb")
+region_enabled = true
+region_rect = Rect2(2035, 108, 144, 158)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_7umym")

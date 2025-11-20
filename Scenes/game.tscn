@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c521uv1lxty8i"]
+
+[ext_resource type="PackedScene" uid="uid://cmo1742uj4tt" path="res://Scenes/graphics.tscn" id="1_i8t51"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_t8ewt"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_t8ewt")
+
+[node name="Graphics" parent="." instance=ExtResource("1_i8t51")]
+position = Vector2(48, 192)
+
+[node name="Fruits" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.8
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(800, 448)
+zoom = Vector2(0.8, 0.8)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

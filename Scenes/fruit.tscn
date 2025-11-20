@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbjplvyx1hbc"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://suux6s2x805f" path="res://Materials/fruit_material.tres" id="1_jwgf2"]
+[ext_resource type="Script" path="res://Scripts/fruit.gd" id="1_l1k4j"]
+
+[node name="Fruit" type="RigidBody2D" groups=["Fruit"]]
+physics_material_override = ExtResource("1_jwgf2")
+contact_monitor = true
+max_contacts_reported = 5
+script = ExtResource("1_l1k4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvirmly1ppntd"]
+
+[ext_resource type="PackedScene" uid="uid://dbjplvyx1hbc" path="res://Scenes/fruit.tscn" id="1_v2vtp"]
+[ext_resource type="Texture2D" uid="uid://bosj5ddv8kvc4" path="res://Assets/fruits.png" id="2_ie1io"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nsrr8"]
+radius = 51.0098
+
+[node name="Pear" groups=["Pear"] instance=ExtResource("1_v2vtp")]
+fruit_type = 4
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(8, -7)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ie1io")
+region_enabled = true
+region_rect = Rect2(2392, 88, 208, 208)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_nsrr8")
